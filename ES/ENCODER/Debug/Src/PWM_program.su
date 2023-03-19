@@ -1,0 +1,2 @@
+../Src/PWM_program.c:17:7:PWM_voidSetPinDirection	16	static
+../Src/PWM_program.c:315:7:PWM_voidWrite	16	static
