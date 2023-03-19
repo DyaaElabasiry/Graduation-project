@@ -5,6 +5,7 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../Src/ENCODER_program.c \
 ../Src/EXTI_program.c \
 ../Src/GPIO_program.c \
 ../Src/NVIC_program.c \
@@ -16,6 +17,7 @@ C_SRCS += \
 ../Src/sysmem.c 
 
 OBJS += \
+./Src/ENCODER_program.o \
 ./Src/EXTI_program.o \
 ./Src/GPIO_program.o \
 ./Src/NVIC_program.o \
@@ -27,6 +29,7 @@ OBJS += \
 ./Src/sysmem.o 
 
 C_DEPS += \
+./Src/ENCODER_program.d \
 ./Src/EXTI_program.d \
 ./Src/GPIO_program.d \
 ./Src/NVIC_program.d \
@@ -45,7 +48,7 @@ Src/%.o Src/%.su: ../Src/%.c Src/subdir.mk
 clean: clean-Src
 
 clean-Src:
-	-$(RM) ./Src/EXTI_program.d ./Src/EXTI_program.o ./Src/EXTI_program.su ./Src/GPIO_program.d ./Src/GPIO_program.o ./Src/GPIO_program.su ./Src/NVIC_program.d ./Src/NVIC_program.o ./Src/NVIC_program.su ./Src/PORT_program.d ./Src/PORT_program.o ./Src/PORT_program.su ./Src/PWM_program.d ./Src/PWM_program.o ./Src/PWM_program.su ./Src/RCC_program.d ./Src/RCC_program.o ./Src/RCC_program.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+	-$(RM) ./Src/ENCODER_program.d ./Src/ENCODER_program.o ./Src/ENCODER_program.su ./Src/EXTI_program.d ./Src/EXTI_program.o ./Src/EXTI_program.su ./Src/GPIO_program.d ./Src/GPIO_program.o ./Src/GPIO_program.su ./Src/NVIC_program.d ./Src/NVIC_program.o ./Src/NVIC_program.su ./Src/PORT_program.d ./Src/PORT_program.o ./Src/PORT_program.su ./Src/PWM_program.d ./Src/PWM_program.o ./Src/PWM_program.su ./Src/RCC_program.d ./Src/RCC_program.o ./Src/RCC_program.su ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
 
 .PHONY: clean-Src
 

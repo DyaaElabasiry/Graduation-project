@@ -1,6 +1,7 @@
 Src/main.o: ../Src/main.c ../Inc/STD_TYPES.h ../Inc/BIT_Manipulation.h \
  ../Inc/RCC_interface.h ../Inc/GPIO_interface.h ../Inc/PORT_interface.h \
- ../Inc/NVIC_interface.h ../Inc/EXTI_interface.h
+ ../Inc/NVIC_interface.h ../Inc/EXTI_interface.h ../Inc/PWM_interface.h \
+ ../Inc/ENCODER_interface.h
 ../Inc/STD_TYPES.h:
 ../Inc/BIT_Manipulation.h:
 ../Inc/RCC_interface.h:
@@ -8,3 +9,5 @@ Src/main.o: ../Src/main.c ../Inc/STD_TYPES.h ../Inc/BIT_Manipulation.h \
 ../Inc/PORT_interface.h:
 ../Inc/NVIC_interface.h:
 ../Inc/EXTI_interface.h:
+../Inc/PWM_interface.h:
+../Inc/ENCODER_interface.h:
