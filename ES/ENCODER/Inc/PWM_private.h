@@ -8,95 +8,151 @@
 #define PWM_PRIVATE_H
 
 
-#define TIM1_Base_Address      (u32)(0x40010000)      //define the boundary address of TIM1
-#define TIM2_Base_Address      (u32)(0x40000000)      //define the boundary address of TIM2
-#define TIM3_Base_Address      (u32)(0x40000400)      //define the boundary address of TIM3
-#define TIM4_Base_Address      (u32)(0x40000800)      //define the boundary address of TIM4
+#define TIM1_Base_Address      (u32)(0x40010000)
+#define TIM2_Base_Address      (u32)(0x40000000)
+#define TIM3_Base_Address      (u32)(0x40000400)
+#define TIM4_Base_Address      (u32)(0x40000800)
 
-/***********   REGISTER ADDRESSES FOR TIM1     ***********************/
 
-#define TIM1_CR1  *((u32 *)(TIM1_Base_Address + 0X00))
-#define TIM1_CR2  *((u32 *)(TIM1_Base_Address + 0X04))
-#define TIM1_SMCR  *((u32 *)(TIM1_Base_Address + 0X08))
-#define TIM1_DIER  *((u32 *)(TIM1_Base_Address + 0X0C))
-#define TIM1_SR  *((u32 *)(TIM1_Base_Address + 0X10))
-#define TIM1_EGR  *((u32 *)(TIM1_Base_Address + 0x14))
-#define TIM1_CCMR1  *((u32 *)(TIM1_Base_Address + 0X18))
-#define TIM1_CCMR2  *((u32 *)(TIM1_Base_Address + 0X1C))
-#define TIM1_CCER  *((u32 *)(TIM1_Base_Address + 0X20))
-#define TIM1_CNT  *((u32 *)(TIM1_Base_Address + 0X24))
-#define TIM1_PSC  *((u32 *)(TIM1_Base_Address + 0X28))
-#define TIM1_ARR  *((u32 *)(TIM1_Base_Address + 0X2C))
-#define TIM1_RCR  *((u32 *)(TIM1_Base_Address + 0X30))
-#define TIM1_CCR1  *((u32 *)(TIM1_Base_Address + 0X34))
-#define TIM1_CCR2  *((u32 *)(TIM1_Base_Address + 0X38))
-#define TIM1_CCR3  *((u32 *)(TIM1_Base_Address + 0X3C))
-#define TIM1_CCR4  *((u32 *)(TIM1_Base_Address + 0X40))
-#define TIM1_BDTR  *((u32 *)(TIM1_Base_Address + 0X44))
-#define TIM1_DCR  *((u32 *)(TIM1_Base_Address + 0X48))
-#define TIM1_DMAR  *((u32 *)(TIM1_Base_Address + 0X4C))
+typedef struct{
+
+	volatile u32 CR1;
+	volatile u32 CR2;
+	volatile u32 SMCR;
+	volatile u32 DIER;
+	volatile u32 SR;
+	volatile u32 EGR;
+	volatile u32 CCMR1;
+	volatile u32 CCMR2;
+	volatile u32 CCER;
+	volatile u32 CNT;
+	volatile u32 PSC;
+	volatile u32 ARR;
+	volatile u32 RCR;
+	volatile u32 CCR1;
+	volatile u32 CCR2;
+	volatile u32 CCR3;
+	volatile u32 CCR4;
+	volatile u32 BDTR;
+	volatile u32 DCR;
+	volatile u32 DMAR;
+
+}TIM1_t;
+
+#define TIMER1		((volatile TIM1_t*)TIM1_Base_Address)
+
 
 /***********   REGISTER ADDRESSES FOR TIM2     ***********************/
 
-#define TIM2_CR1  *((u32 *)(TIM2_Base_Address + 0X00))
-#define TIM2_CR2  *((u32 *)(TIM2_Base_Address + 0X04))
-#define TIM2_SMCR  *((u32 *)(TIM2_Base_Address + 0X08))
-#define TIM2_DIER  *((u32 *)(TIM2_Base_Address + 0X0C))
-#define TIM2_SR  *((u32 *)(TIM2_Base_Address + 0X10))
-#define TIM2_EGR  *((u32 *)(TIM2_Base_Address + 0x14))
-#define TIM2_CCMR1  *((u32 *)(TIM2_Base_Address + 0X18))
-#define TIM2_CCMR2  *((u32 *)(TIM2_Base_Address + 0X1C))
-#define TIM2_CCER  *((u32 *)(TIM2_Base_Address + 0X20))
-#define TIM2_CNT  *((u32 *)(TIM2_Base_Address + 0X24))
-#define TIM2_PSC  *((u32 *)(TIM2_Base_Address + 0X28))
-#define TIM2_ARR  *((u32 *)(TIM2_Base_Address + 0X2C))
-#define TIM2_CCR1  *((u32 *)(TIM2_Base_Address + 0X34))
-#define TIM2_CCR2  *((u32 *)(TIM2_Base_Address + 0X38))
-#define TIM2_CCR3  *((u32 *)(TIM2_Base_Address + 0X3C))
-#define TIM2_CCR4  *((u32 *)(TIM2_Base_Address + 0X40))
-#define TIM2_DCR  *((u32 *)(TIM2_Base_Address + 0X48))
-#define TIM2_DMAR  *((u32 *)(TIM2_Base_Address + 0X4C))
+typedef struct{
 
-/***********   REGISTER ADDRESSES FOR TIM3     ***********************/
+	volatile u32 CR1;
+	volatile u32 CR2;
+	volatile u32 SMCR;
+	volatile u32 DIER;
+	volatile u32 SR;
+	volatile u32 EGR;
+	volatile u32 CCMR1;
+	volatile u32 CCMR2;
+	volatile u32 CCER;
+	volatile u32 CNT;
+	volatile u32 PSC;
+	volatile u32 ARR;
 
-#define TIM3_CR1  *((u32 *)(TIM3_Base_Address + 0X00))
-#define TIM3_CR2  *((u32 *)(TIM3_Base_Address + 0X04))
-#define TIM3_SMCR  *((u32 *)(TIM3_Base_Address + 0X08))
-#define TIM3_DIER  *((u32 *)(TIM3_Base_Address + 0X0C))
-#define TIM3_SR  *((u32 *)(TIM3_Base_Address + 0X10))
-#define TIM3_EGR  *((u32 *)(TIM3_Base_Address + 0x14))
-#define TIM3_CCMR1  *((u32 *)(TIM3_Base_Address + 0X18))
-#define TIM3_CCMR2  *((u32 *)(TIM3_Base_Address + 0X1C))
-#define TIM3_CCER  *((u32 *)(TIM3_Base_Address + 0X20))
-#define TIM3_CNT  *((u32 *)(TIM3_Base_Address + 0X24))
-#define TIM3_PSC  *((u32 *)(TIM3_Base_Address + 0X28))
-#define TIM3_ARR  *((u32 *)(TIM3_Base_Address + 0X2C))
-#define TIM3_CCR1  *((u32 *)(TIM3_Base_Address + 0X34))
-#define TIM3_CCR2  *((u32 *)(TIM3_Base_Address + 0X38))
-#define TIM3_CCR3  *((u32 *)(TIM3_Base_Address + 0X3C))
-#define TIM3_CCR4  *((u32 *)(TIM3_Base_Address + 0X40))
-#define TIM3_DCR  *((u32 *)(TIM3_Base_Address + 0X48))
-#define TIM3_DMAR  *((u32 *)(TIM3_Base_Address + 0X4C))
+	volatile u32 RESERVED;   //Empty
 
-/***********   REGISTER ADDRESSES FOR TIM4     ***********************/
+	volatile u32 CCR1;
+	volatile u32 CCR2;
+	volatile u32 CCR3;
+	volatile u32 CCR4;
 
-#define TIM4_CR1  *((u32 *)(TIM4_Base_Address + 0X00))
-#define TIM4_CR2  *((u32 *)(TIM4_Base_Address + 0X04))
-#define TIM4_SMCR  *((u32 *)(TIM4_Base_Address + 0X08))
-#define TIM4_DIER  *((u32 *)(TIM4_Base_Address + 0X0C))
-#define TIM4_SR  *((u32 *)(TIM4_Base_Address + 0X10))
-#define TIM4_EGR  *((u32 *)(TIM4_Base_Address + 0x14))
-#define TIM4_CCMR1  *((u32 *)(TIM4_Base_Address + 0X18))
-#define TIM4_CCMR2  *((u32 *)(TIM4_Base_Address + 0X1C))
-#define TIM4_CCER  *((u32 *)(TIM4_Base_Address + 0X20))
-#define TIM4_CNT  *((u32 *)(TIM4_Base_Address + 0X24))
-#define TIM4_PSC  *((u32 *)(TIM4_Base_Address + 0X28))
-#define TIM4_ARR  *((u32 *)(TIM4_Base_Address + 0X2C))
-#define TIM4_CCR1  *((u32 *)(TIM4_Base_Address + 0X34))
-#define TIM4_CCR2  *((u32 *)(TIM4_Base_Address + 0X38))
-#define TIM4_CCR3  *((u32 *)(TIM4_Base_Address + 0X3C))
-#define TIM4_CCR4  *((u32 *)(TIM4_Base_Address + 0X40))
-#define TIM4_DCR  *((u32 *)(TIM4_Base_Address + 0X48))
-#define TIM4_DMAR  *((u32 *)(TIM4_Base_Address + 0X4C))
+	volatile u32 RESERVED1;   //Empty
+
+	volatile u32 DCR;
+	volatile u32 DMAR;
+
+}TIM_t;
+
+
+#define TIMER2		((volatile TIM_t*)TIM2_Base_Address)
+#define TIMER3		((volatile TIM_t*)TIM3_Base_Address)
+#define TIMER4		((volatile TIM_t*)TIM4_Base_Address)
+
+typedef enum
+{
+	CEN,
+	UDIS,
+	URS	,
+	OPM	,
+	DIR	,
+	CMS0,
+	CMS1,
+	ARPE,
+	CKD0,
+	CKD1,
+
+}CR1_PINS_t;
+
+
+typedef enum
+{
+	CC1S0,
+	CC1S1,
+	OC1PE=3,
+	OC1M0,
+	OC1M1,
+	OC1M2,
+	CC2S0=8,
+	CC2S1,
+	OC2PE=11,
+	OC2M0,
+	OC2M1,
+	OC2M2,
+
+}CCMR1_PINS_t;
+
+typedef enum
+{
+	CC3S0,
+	CC3S1,
+	OC3PE=3,
+	OC3M0,
+	OC3M1,
+	OC3M2,
+	CC4S0=8,
+	CC4S1,
+	OC4PE=11,
+	OC4M0,
+	OC4M1,
+	OC4M2,
+
+}CCMR2_PINS_t;
+
+typedef enum
+{
+	CC1E,
+	CC1P,
+	CC1NP=3,
+	CC2E,
+	CC2P,
+	CC2NP=7,
+	CC3E,
+	CC3P,
+	CC3NP=11,
+	CC4E,
+	CC4P,
+	CC4NP=15,
+
+}CCER_PINS_t;
+
+typedef enum
+{
+	UG,
+}EGR_PINS_t;
+
+
+
+#define ENABLE    1
+#define DISABLE   0
 
 #endif

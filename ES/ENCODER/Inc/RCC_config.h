@@ -12,7 +12,7 @@
 /*           RCC_u8Clk_Enable                                                                               */
 #define RCC_u8HSION_Mode         RCC_u8Clk_Enable
 #define RCC_u8HSEON_Mode         RCC_u8Clk_Enable
-#define RCC_u8PLL_Mode           RCC_u8Clk_Enable
+#define RCC_u8PLL_Mode           RCC_u8Clk_Disable
 
 
 /* options : RCC_u8BYPASSED                                                                                   */
@@ -68,7 +68,7 @@
           5-RCC_u8AHB_CLK_Division_by_16
 
 */
-#define RCC_u8APB1_PRESCALER    RCC_u8AHB_CLK_Division_by_1  /*Shoudn't excced 84 MHZ*/
+#define RCC_u8APB1_PRESCALER    RCC_u8AHB_CLK_Division_by_16  /*Shoudn't excced 84 MHZ*/
 #define RCC_u8APB2_PRESCALER    RCC_u8AHB_CLK_Division_by_1  /*Shoudn't excced 42 MHZ*/
 
 /*Options 1-HSI_MCO1_Selected 

@@ -1,3 +1,4 @@
 ../Src/ENCODER_program.c:17:6:Encoder_init	24	static
 ../Src/ENCODER_program.c:46:6:Encoder_Forward	40	static
 ../Src/ENCODER_program.c:60:6:Encoder_Backward	40	static
+../Src/ENCODER_program.c:74:6:RPM_Calculate	24	static

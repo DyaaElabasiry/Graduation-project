@@ -21,6 +21,11 @@
 
 //#include"LCD_interface.h"
 
+
+TIM_COMP Timer2;
+
+void TIM_2_init(TIM_COMP* TIM);
+
 Encoder_variables Encoder_1;
 Encoder_variables Encoder_2;
 
@@ -42,23 +47,32 @@ int main(void)
 
 	PORT_voidInit();
 
+	TIM_2_init(&Timer2);
+	//PWM_voidInit();
+
 	/* ENCODER 1 & 2 init */
 	Encoder_1_init(&Encoder_1);
 	Encoder_2_init(&Encoder_2);
 
+	//PWM_voidInit(&Timer2);
 	/* motor A | B output pins */
-	PWM_voidSetPinDirection(TIM1,CH1); /* PA8 PWM */ /* PB0 Direction */
 
-	PWM_voidWrite(TIM1,CH1,0);
+	PWM_voidWrite(&Timer2,200);
+	//MPWM2_SetDutyCycle(CH1,190);
 	GPIO_SetPinValue(GPIO_PORTB,GPIO_PIN0,GPIO_PIN_LOW);
 
-	/* motor C | D output pins */
-	PWM_voidSetPinDirection(TIM1,CH2); /* PA9 PWM */ /* PB1 Direction */
 
-	PWM_voidWrite(TIM1,CH2,0);
+	/* motor C | D output pins */
+
+	//MPWM2_SetDutyCycle(CH2,190);
 	GPIO_SetPinValue(GPIO_PORTB,GPIO_PIN1,GPIO_PIN_LOW);
+
 	/* Loop forever */
-	for(;;);
+	for(;;)
+	{
+
+
+	}
 }
 
 
@@ -72,9 +86,6 @@ void RCC_Init(void)
 	/* Enable GPIOB clock */
 	RCC_voidPeripheralClockEnable(RCC_AHB1,RCC_GPIOB);
 
-	/* Enable TIM1 clock */
-	RCC_voidPeripheralClockEnable(RCC_APB2,RCC_TIM1);
-
 	/* Enable TIM2 clock */
 	RCC_voidPeripheralClockEnable(RCC_APB1,RCC_TIM2);
 
@@ -85,6 +96,24 @@ void RCC_Init(void)
 
 }
 
+/*
+ * Timer 2 Init
+ */
+void TIM_2_init(TIM_COMP* TIM)
+{
+	TIM->TIM_NUM = TIM2;
+	TIM->TIM_CHANNEL_NUM=CH1;
+	TIM->PWM_MODE=PWM_MODE1;
+	TIM->PWM_PERIOD=200;   //APB1 timer clock = 1 MHZ
+	TIM->PWM_POLARITY=active_high;
+	TIM->TIM_PRESCALER=1;
+
+	PWM_voidInit(TIM);
+}
+
+/*
+ * ENCODER 1 Init
+ */
 void Encoder_1_init(Encoder_variables* encoder)
 {
 

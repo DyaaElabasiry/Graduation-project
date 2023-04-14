@@ -16,16 +16,16 @@
 		3) Alternate_Function_Mode
 		4) Analog_Mode
 */
-#define GPIOA_PIN0_MODE                       Input_Mode
-#define GPIOA_PIN1_MODE 		              Input_Mode
+#define GPIOA_PIN0_MODE                       Alternate_Function_Mode
+#define GPIOA_PIN1_MODE 		              Alternate_Function_Mode
 #define GPIOA_PIN2_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN3_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN4_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN5_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN6_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN7_MODE 		              General_Purpose_Output_Mode
-#define GPIOA_PIN8_MODE 		              General_Purpose_Output_Mode
-#define GPIOA_PIN9_MODE 		              General_Purpose_Output_Mode
+#define GPIOA_PIN8_MODE 		              Alternate_Function_Mode
+#define GPIOA_PIN9_MODE 		              Alternate_Function_Mode
 #define GPIOA_PIN10_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN11_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN12_MODE 		              General_Purpose_Output_Mode
@@ -249,8 +249,8 @@
 		15) AF14           --> 
 		16) AF15           --> EVENTOUT
 */
-#define GPIOA_PIN0_AF                         AF11 
-#define GPIOA_PIN1_AF		                  AF11
+#define GPIOA_PIN0_AF                         AF1
+#define GPIOA_PIN1_AF		                  AF1
 #define GPIOA_PIN2_AF		                  AF11
 #define GPIOA_PIN3_AF		                  AF11
 #define GPIOA_PIN4_AF		                  AF11
