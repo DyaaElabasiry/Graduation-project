@@ -16,16 +16,16 @@
 		3) Alternate_Function_Mode
 		4) Analog_Mode
 */
-#define GPIOA_PIN0_MODE                       Alternate_Function_Mode
-#define GPIOA_PIN1_MODE 		              Alternate_Function_Mode
-#define GPIOA_PIN2_MODE 		              General_Purpose_Output_Mode
-#define GPIOA_PIN3_MODE 		              General_Purpose_Output_Mode
+#define GPIOA_PIN0_MODE                       Input_Mode
+#define GPIOA_PIN1_MODE 		              Input_Mode
+#define GPIOA_PIN2_MODE 		              Input_Mode
+#define GPIOA_PIN3_MODE 		              Input_Mode
 #define GPIOA_PIN4_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN5_MODE 		              General_Purpose_Output_Mode
-#define GPIOA_PIN6_MODE 		              General_Purpose_Output_Mode
-#define GPIOA_PIN7_MODE 		              General_Purpose_Output_Mode
-#define GPIOA_PIN8_MODE 		              Alternate_Function_Mode
-#define GPIOA_PIN9_MODE 		              Alternate_Function_Mode
+#define GPIOA_PIN6_MODE 		              Alternate_Function_Mode
+#define GPIOA_PIN7_MODE 		              Alternate_Function_Mode
+#define GPIOA_PIN8_MODE 		              General_Purpose_Output_Mode
+#define GPIOA_PIN9_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN10_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN11_MODE 		              General_Purpose_Output_Mode
 #define GPIOA_PIN12_MODE 		              General_Purpose_Output_Mode
@@ -103,12 +103,12 @@
 */
 #define GPIOA_PIN0_Speed                      Medium_Speed
 #define GPIOA_PIN1_Speed 		              Medium_Speed
-#define GPIOA_PIN2_Speed 		              Very_High_Speed
-#define GPIOA_PIN3_Speed 		              Very_High_Speed
-#define GPIOA_PIN4_Speed 		              Very_High_Speed
-#define GPIOA_PIN5_Speed 		              Very_High_Speed
-#define GPIOA_PIN6_Speed 		              Very_High_Speed
-#define GPIOA_PIN7_Speed 		              Very_High_Speed
+#define GPIOA_PIN2_Speed 		              Medium_Speed
+#define GPIOA_PIN3_Speed 		              Medium_Speed
+#define GPIOA_PIN4_Speed 		              Medium_Speed
+#define GPIOA_PIN5_Speed 		              Medium_Speed
+#define GPIOA_PIN6_Speed 		              Medium_Speed
+#define GPIOA_PIN7_Speed 		              Medium_Speed
 #define GPIOA_PIN8_Speed 		              Medium_Speed
 #define GPIOA_PIN9_Speed 		              Medium_Speed
 #define GPIOA_PIN10_Speed		              Medium_Speed
@@ -249,16 +249,16 @@
 		15) AF14           --> 
 		16) AF15           --> EVENTOUT
 */
-#define GPIOA_PIN0_AF                         AF1
-#define GPIOA_PIN1_AF		                  AF1
+#define GPIOA_PIN0_AF                         AF11
+#define GPIOA_PIN1_AF		                  AF11
 #define GPIOA_PIN2_AF		                  AF11
 #define GPIOA_PIN3_AF		                  AF11
 #define GPIOA_PIN4_AF		                  AF11
 #define GPIOA_PIN5_AF		                  AF11
-#define GPIOA_PIN6_AF		                  AF11
-#define GPIOA_PIN7_AF		                  AF11  
-#define GPIOA_PIN8_AF		                  AF1
-#define GPIOA_PIN9_AF		                  AF1
+#define GPIOA_PIN6_AF		                  AF2
+#define GPIOA_PIN7_AF		                  AF2
+#define GPIOA_PIN8_AF		                  AF11
+#define GPIOA_PIN9_AF		                  AF11
 #define GPIOA_PIN10_AF	                      AF11
 #define GPIOA_PIN11_AF	                      AF11
 #define GPIOA_PIN12_AF	                      AF11
