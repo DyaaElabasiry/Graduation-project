@@ -37,8 +37,8 @@
 #define GPIOB_PIN3_MODE                       General_Purpose_Output_Mode
 #define GPIOB_PIN4_MODE                       General_Purpose_Output_Mode
 #define GPIOB_PIN5_MODE                       General_Purpose_Output_Mode
-#define GPIOB_PIN6_MODE                       General_Purpose_Output_Mode
-#define GPIOB_PIN7_MODE                       General_Purpose_Output_Mode
+#define GPIOB_PIN6_MODE                       Alternate_Function_Mode
+#define GPIOB_PIN7_MODE                       Alternate_Function_Mode
 #define GPIOB_PIN8_MODE                       General_Purpose_Output_Mode
 #define GPIOB_PIN9_MODE                       General_Purpose_Output_Mode
 #define GPIOB_PIN10_MODE                      General_Purpose_Output_Mode
@@ -270,8 +270,8 @@
 #define GPIOB_PIN3_AF                         AF11
 #define GPIOB_PIN4_AF                         AF11
 #define GPIOB_PIN5_AF                         AF11
-#define GPIOB_PIN6_AF                         AF11
-#define GPIOB_PIN7_AF                         AF11
+#define GPIOB_PIN6_AF                         AF7
+#define GPIOB_PIN7_AF                         AF7
 #define GPIOB_PIN8_AF                         AF11
 #define GPIOB_PIN9_AF                         AF11
 #define GPIOB_PIN10_AF                        AF11

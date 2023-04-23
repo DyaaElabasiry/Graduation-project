@@ -6,8 +6,8 @@
 /*************************************************************/
 
 
-#include "STD_TYPES.h"
-#include "BIT_Manipulation.h"
+#include "../../00-LIB/STD_TYPES.h"
+#include "../../00-LIB/BIT_Manipulation.h"
 
 #include "GPIO_interface.h"
 #include "GPIO_private.h"

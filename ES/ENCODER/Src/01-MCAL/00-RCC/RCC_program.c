@@ -5,8 +5,9 @@
 /*************       Version: 1.00            ****************/
 /*************************************************************/
 
-#include"STD_TYPES.h"
-#include"BIT_Manipulation.h"
+#include "../../00-LIB/STD_TYPES.h"
+#include "../../00-LIB/BIT_Manipulation.h"
+
 #include"RCC_private.h"
 #include"RCC_config.h"
 #include"RCC_interface.h"

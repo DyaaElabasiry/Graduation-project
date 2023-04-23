@@ -5,15 +5,31 @@
 /*     Version:   2.00                     */
 /******************************************/
 
-#include "STD_TYPES.h"
-#include "GPIO_interface.h"
-//#include "STK_interface.h"
-#include "EXTI_interface.h"
-#include "NVIC_interface.h"
+
+#include "../../00-LIB/STD_TYPES.h"
+#include "../../00-LIB/BIT_Manipulation.h"
+
+#include "../../01-MCAL/02-GPIO/GPIO_interface.h"
+#include "../../01-MCAL/05-SYSTICK/STK_interface.h"
+#include "../../01-MCAL/03-EXTI/EXTI_interface.h"
+#include "../../01-MCAL/04-NVIC/NVIC_interface.h"
+#include "../../01-MCAL/06-USART/USART_interface.h"
 
 #include "ENCODER_interface.h"
+#include "LED_interface.h"
 
 
+	LED_Object LED1={
+			Source_Connection_type,
+			GPIO_PORTB,
+			GPIO_PIN2
+	};
+
+	LED_Object LED2={
+				Source_Connection_type,
+				GPIO_PORTB,
+				GPIO_PIN3
+		};
 void Encoder_init(Encoder_variables* copy_Encoder)
 {
 
@@ -32,15 +48,17 @@ void Encoder_init(Encoder_variables* copy_Encoder)
 			EXTI_RISING_EDGE}; //ONCHANGE
 
 	/* Enable Interrupt*/
-	NVIC_voidEnableInterrupt(copy_Encoder->Encoder_A_IRQn);
-	NVIC_voidEnableInterrupt(copy_Encoder->Encoder_B_IRQn);
+	NVIC_voidEnableInterrupt(EXTI0);
+	NVIC_voidEnableInterrupt(EXTI1);
+	NVIC_voidEnableInterrupt(EXTI2);
+	NVIC_voidEnableInterrupt(EXTI3);
+
+	EXTI_voidInit(&EXTI_L0);
+	EXTI_voidInit(&EXTI_L1);
 
 	/*set call back functions*/
 	EXTI_voidSetCallBack(&EXTI_L0,copy_Encoder->ptr_forward);
 	EXTI_voidSetCallBack(&EXTI_L1,copy_Encoder->ptr_backward);
-
-	EXTI_voidInit(&EXTI_L0);
-	EXTI_voidInit(&EXTI_L1);
 }
 
 void Encoder_Forward(Encoder_variables *local_encoder)
@@ -54,6 +72,9 @@ void Encoder_Forward(Encoder_variables *local_encoder)
 		local_encoder->EncoderCounter++;
 	else
 		local_encoder->EncoderCounter--;
+
+	LED_Status(LED1,LED_ON);
+	//USART_voidSendByte(USART_1,local_encoder->EncoderCounter);
 
 }
 
@@ -69,6 +90,8 @@ void Encoder_Backward(Encoder_variables *local_encoder)
 	else
 		local_encoder->EncoderCounter--;
 
+	LED_Status(LED2,LED_ON);
+	//USART_voidSendByte(USART_1,local_encoder->EncoderCounter);
 }
 
 void RPM_Calculate(Encoder_variables *local_encoder)

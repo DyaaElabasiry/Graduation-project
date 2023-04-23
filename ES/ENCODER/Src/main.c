@@ -1,25 +1,21 @@
 
 #include <stdint.h>
 
-#if !defined(__SOFT_FP__) && defined(__ARM_FP)
-  #warning "FPU is not initialized, but the project is compiling for an FPU. Please initialize the FPU before use."
-#endif
+#include "00-LIB/STD_TYPES.h"
+#include "00-LIB/BIT_Manipulation.h"
 
-#include"STD_TYPES.h"
-#include"BIT_Manipulation.h"
+#include "01-MCAL/00-RCC/RCC_interface.h"
+#include "01-MCAL/01-PORT/PORT_interface.h"
+#include "01-MCAL/02-GPIO/GPIO_interface.h"
+#include"01-MCAL/03-EXTI/EXTI_interface.h"
+#include"01-MCAL/04-NVIC/NVIC_interface.h"
+#include"01-MCAL/06-USART/USART_interface.h"
+#include"01-MCAL/07-PWM/PWM_interface.h"
 
 
-#include"RCC_interface.h"
-#include"GPIO_interface.h"
-#include"PORT_interface.h"
-#include"NVIC_interface.h"
-#include"EXTI_interface.h"
-#include"PWM_interface.h"
-//#include"USART_interface.h"
+#include"02-HAL/00-ENCODER/ENCODER_interface.h"
 
-#include"ENCODER_interface.h"
 
-//#include"LCD_interface.h"
 
 
 TIM_COMP Timer3CH1;
@@ -43,6 +39,7 @@ void forward_2()  				{ Encoder_Forward (&Encoder_2) ; }
 void backward_2()   			{ Encoder_Backward(&Encoder_2); }
 
 void RCC_Init(void);
+void USART_Init(void);
 
 int main(void)
 {
@@ -58,18 +55,21 @@ int main(void)
 	Encoder_1_init(&Encoder_1);
 	Encoder_2_init(&Encoder_2);
 
-	//PWM_voidInit(&Timer1);
+
+	//USART_Init();
+
+
 	/* motor A | B output pins */
 
-	PWM_voidWrite(&Timer3CH1,50);
+	/*PWM_voidWrite(&Timer3CH1,50);
 	GPIO_SetPinValue(GPIO_PORTB,GPIO_PIN0,GPIO_PIN_LOW);
-
+    */
 
 	/* motor C | D output pins */
 
-	PWM_voidWrite(&Timer3CH2,170);
+	/*PWM_voidWrite(&Timer3CH2,170);
 	GPIO_SetPinValue(GPIO_PORTB,GPIO_PIN1,GPIO_PIN_LOW);
-
+    */
 	/* Loop forever */
 	for(;;)
 	{
@@ -100,7 +100,32 @@ void RCC_Init(void)
 	/* Enable Selection line of MUX*/
 	RCC_voidPeripheralClockEnable(RCC_APB2,RCC_SYSCFG);
 
+	/* Enable USART clock */
+	RCC_voidPeripheralClockEnable(RCC_APB2,RCC_USART1);
 
+
+
+}
+
+
+void USART_Init(void)
+{
+	USART_InitType UART_Config={.BaudRate=USART_9600_16MHZ,
+					.DataWidth=USART_8_Data_Bits,
+					.StopBits=USART_1_Stop_Bit,
+					.Parity_Enable=USART_Parity_DISABLE,
+					.Parity_Selection=USART_Odd_Parity,
+					.TransferDirection=USART_TX_RX,
+					.Oversampling=OVER_SAMPLING_16,
+			};
+
+			USART_ClockInitTypeDef UART_CLOCK={
+					.ClockOutput=0,
+					.ClockPhase=0,
+					.ClockPolarity=0,
+			};
+
+		USART_voidInit(&UART_Config,&UART_CLOCK,USART_1);
 
 }
 
@@ -164,7 +189,7 @@ void Encoder_1_init(Encoder_variables* encoder)
  */
 void Encoder_2_init(Encoder_variables* encoder)
 {
-	/* Set Pins and Variables */
+
 	encoder->EncoderResolution = 2050;
 
 	encoder->Encoder_A_Pin = GPIO_PIN2;
@@ -181,3 +206,4 @@ void Encoder_2_init(Encoder_variables* encoder)
 	Encoder_init(encoder);
 
 }
+

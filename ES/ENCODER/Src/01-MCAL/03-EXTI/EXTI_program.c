@@ -6,8 +6,8 @@
 /******************************************/
 
 
-#include "STD_Types.h"
-#include "Bit_Manipulation.h"
+#include "../../00-LIB/STD_TYPES.h"
+#include "../../00-LIB/BIT_Manipulation.h"
 
 #include "EXTI_private.h"
 #include "EXTI_config.h"

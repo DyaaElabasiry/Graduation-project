@@ -3,8 +3,8 @@
 /* Version   : V1                                                                  */
 /* Date      : 18 Mar 2023                                                         */
 /*********************************************************************************/
-#include "STD_TYPES.h"
-#include "BIT_Manipulation.h"
+#include "../../00-LIB/STD_TYPES.h"
+#include "../../00-LIB/BIT_Manipulation.h"
 
 #include "PWM_interface.h"
 #include "PWM_private.h"

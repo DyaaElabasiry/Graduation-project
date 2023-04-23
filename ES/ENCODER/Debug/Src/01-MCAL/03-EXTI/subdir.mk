@@ -5,29 +5,23 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
-../Src/main.c \
-../Src/syscalls.c \
-../Src/sysmem.c 
+../Src/01-MCAL/03-EXTI/EXTI_program.c 
 
 OBJS += \
-./Src/main.o \
-./Src/syscalls.o \
-./Src/sysmem.o 
+./Src/01-MCAL/03-EXTI/EXTI_program.o 
 
 C_DEPS += \
-./Src/main.d \
-./Src/syscalls.d \
-./Src/sysmem.d 
+./Src/01-MCAL/03-EXTI/EXTI_program.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
-Src/%.o Src/%.su: ../Src/%.c Src/subdir.mk
+Src/01-MCAL/03-EXTI/%.o Src/01-MCAL/03-EXTI/%.su: ../Src/01-MCAL/03-EXTI/%.c Src/01-MCAL/03-EXTI/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DSTM32F401CCUx -DSTM32 -DSTM32F4 -c -I../Inc -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"$(@:%.o=%.d)" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 
-clean: clean-Src
+clean: clean-Src-2f-01-2d-MCAL-2f-03-2d-EXTI
 
-clean-Src:
-	-$(RM) ./Src/main.d ./Src/main.o ./Src/main.su ./Src/syscalls.d ./Src/syscalls.o ./Src/syscalls.su ./Src/sysmem.d ./Src/sysmem.o ./Src/sysmem.su
+clean-Src-2f-01-2d-MCAL-2f-03-2d-EXTI:
+	-$(RM) ./Src/01-MCAL/03-EXTI/EXTI_program.d ./Src/01-MCAL/03-EXTI/EXTI_program.o ./Src/01-MCAL/03-EXTI/EXTI_program.su
 
-.PHONY: clean-Src
+.PHONY: clean-Src-2f-01-2d-MCAL-2f-03-2d-EXTI
 

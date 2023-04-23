@@ -10,6 +10,16 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include Startup/subdir.mk
+-include Src/02-HAL/00-ENCODER/subdir.mk
+-include Src/01-MCAL/07-PWM/subdir.mk
+-include Src/01-MCAL/06-USART/subdir.mk
+-include Src/01-MCAL/05-SYSTICK/subdir.mk
+-include Src/01-MCAL/04-NVIC/subdir.mk
+-include Src/01-MCAL/03-EXTI/subdir.mk
+-include Src/01-MCAL/02-GPIO/subdir.mk
+-include Src/01-MCAL/01-PORT/subdir.mk
+-include Src/01-MCAL/00-RCC/subdir.mk
+-include Src/00-LIB/subdir.mk
 -include Src/subdir.mk
 -include objects.mk
 

@@ -5,9 +5,8 @@
 /*************       Version: 1.00            ****************/
 /*************************************************************/
 
-#include"STD_TYPES.h"
-#include"BIT_Manipulation.h"
-
+#include "../../00-LIB/STD_TYPES.h"
+#include "../../00-LIB/BIT_Manipulation.h"
 
 #include"NVIC_private.h"
 #include"NVIC_config.h"
