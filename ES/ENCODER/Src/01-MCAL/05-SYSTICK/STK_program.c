@@ -108,12 +108,26 @@ void STK_voidSetPeriodicInterval(u32 Copy_u32TickCount, void (*CallBackFunction)
 
 u32 STK_u32GetElapsedTime(void)
 {
-	return STK->LOAD-STK->VAL;
+	return (STK->LOAD)-(STK->VAL);
 }
 
 u32 STK_u32GetRemainingTime(void)
 {
 	return STK->VAL;
+}
+
+u64 STK_u64Millis(void)
+{
+
+	static u32 Last_Time_Millis,Finished_Millis;
+	static u64 Elapsed_Time_Millis;
+
+    Finished_Millis      = STK_u32GetElapsedTime()/1000.0;
+	Elapsed_Time_Millis += Finished_Millis - Last_Time_Millis;
+	Last_Time_Millis     = Finished_Millis;
+
+    return Elapsed_Time_Millis;
+
 }
 
 

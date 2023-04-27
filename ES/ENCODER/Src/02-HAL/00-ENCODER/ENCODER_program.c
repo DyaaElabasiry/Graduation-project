@@ -96,7 +96,7 @@ void Encoder_Backward(Encoder_variables *local_encoder)
 
 void RPM_Calculate(Encoder_variables *local_encoder)
 {
-	//local_encoder->CurrentTime = Millis();
+	local_encoder->CurrentTime = STK_u64Millis();
 	local_encoder->delta_time = ((local_encoder->CurrentTime - local_encoder->LastTime) * 1.0);  /* delta_time in  mSec*/
 
 	local_encoder->RPM =( ( (local_encoder->EncoderCounter - local_encoder->LastEncoderCounter) * 1.0)

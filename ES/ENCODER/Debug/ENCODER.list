@@ -27,23 +27,23 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   ALLOC
  11 .ARM.attributes 00000030  00000000  00000000  00020008  2**0
                   CONTENTS, READONLY
- 12 .debug_info   00002bb3  00000000  00000000  00020038  2**0
+ 12 .debug_info   00002c28  00000000  00000000  00020038  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 13 .debug_abbrev 00000c35  00000000  00000000  00022beb  2**0
+ 13 .debug_abbrev 00000c68  00000000  00000000  00022c60  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 14 .debug_aranges 00000348  00000000  00000000  00023820  2**3
+ 14 .debug_aranges 00000350  00000000  00000000  000238c8  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 15 .debug_ranges 00000290  00000000  00000000  00023b68  2**3
+ 15 .debug_ranges 00000298  00000000  00000000  00023c18  2**3
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 16 .debug_macro  0000179e  00000000  00000000  00023df8  2**0
+ 16 .debug_macro  0000179e  00000000  00000000  00023eb0  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 17 .debug_line   00001ca8  00000000  00000000  00025596  2**0
+ 17 .debug_line   00001cd8  00000000  00000000  0002564e  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 18 .debug_str    0000a58c  00000000  00000000  0002723e  2**0
+ 18 .debug_str    0000a5cf  00000000  00000000  00027326  2**0
                   CONTENTS, READONLY, DEBUGGING, OCTETS
- 19 .comment      00000050  00000000  00000000  000317ca  2**0
+ 19 .comment      00000050  00000000  00000000  000318f5  2**0
                   CONTENTS, READONLY
- 20 .debug_frame  00000a5c  00000000  00000000  0003181c  2**2
+ 20 .debug_frame  00000a80  00000000  00000000  00031948  2**2
                   CONTENTS, READONLY, DEBUGGING, OCTETS
 
 Disassembly of section .text:
@@ -900,8 +900,8 @@ void NVIC_voidEnableInterrupt(INT_PRIO_t Copy_u8InterruptPriority)
  8000710:	e000e100 	.word	0xe000e100
 
 08000714 <SysTick_Handler>:
-{
-	return STK->VAL;
+    return Elapsed_Time_Millis;
+
 }
 
 

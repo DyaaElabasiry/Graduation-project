@@ -5,4 +5,5 @@
 ../Src/01-MCAL/05-SYSTICK/STK_program.c:90:6:STK_voidSetPeriodicInterval	16	static
 ../Src/01-MCAL/05-SYSTICK/STK_program.c:109:5:STK_u32GetElapsedTime	4	static
 ../Src/01-MCAL/05-SYSTICK/STK_program.c:114:5:STK_u32GetRemainingTime	4	static
-../Src/01-MCAL/05-SYSTICK/STK_program.c:120:6:SysTick_Handler	16	static
+../Src/01-MCAL/05-SYSTICK/STK_program.c:119:5:STK_u64Millis	24	static
+../Src/01-MCAL/05-SYSTICK/STK_program.c:134:6:SysTick_Handler	16	static

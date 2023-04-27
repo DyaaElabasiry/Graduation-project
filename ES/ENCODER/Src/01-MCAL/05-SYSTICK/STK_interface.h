@@ -70,5 +70,7 @@ u32 STK_u32GetRemainingTime(void);
  */
 u32 STK_u32GetElapsedTime(void);
 
+u64 STK_u64Millis(void);
+
 
 #endif
