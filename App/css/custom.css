@@ -175,12 +175,12 @@ input[type="radio"] {
   content: '';
   position: absolute;
   display: none;
-  z-index: 2;
+  z-index: 1;
   width: 20%;
   height: 20%;
   top: 50%;
   left: 50%;
-  background: #ddd;
+  background: rgb(0, 0, 0);
   border-radius: 50%;
   transform: translate(-50%, -50%);
   transition: all 0.25s;
@@ -825,7 +825,7 @@ input[type="radio"] {
 }
 .blue .d-pad:after {
   display: block;
-  background: #ccc;
+  background: rgb(0, 0, 0);
 }
 .blue .d-pad a:after {
   border-radius: 10%;
@@ -1076,4 +1076,38 @@ input[type="radio"] {
 }
 .o-pad.right a.right:after {
   border-left-color: #333;
+}
+
+
+.control.center {
+  width: 40px;
+  height: 40px;
+  background-color: #fff;
+  border: 2px solid #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+.control.center:before {
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 3;
+  width: 20px;
+  height: 20px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25px;
+  height: 25px;
+  background-color: #000;
+  border-radius: 50%;
+}
+
+.control.center:hover {
+  cursor: pointer;
 }

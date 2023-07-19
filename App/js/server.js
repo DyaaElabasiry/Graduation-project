@@ -24,10 +24,19 @@ server.listen(3000, () => {
       console.log(`Received direction event from client ${socket.id}: ${direction}`);
 
       // Do something with the direction here, e.g. move a robot in the specified direction.
-    });
 
+      
+
+    socket.on('feature', (feature) => {
+      console.log(`Received feature event from client ${socket.id}: ${feature}`);
+
+      // Do something with the feature here, e.g. move a robot in the specified direction.
+
+      
     socket.on('disconnect', () => {
       console.log(`Client ${socket.id} has disconnected.`);
     });
   });
+});
+});
 });
