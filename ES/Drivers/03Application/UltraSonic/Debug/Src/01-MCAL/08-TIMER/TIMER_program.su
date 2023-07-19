@@ -1,0 +1,12 @@
+../Src/01-MCAL/08-TIMER/TIMER_program.c:21:6:MTimer_voidInit	16	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:183:6:MTimer_voidSetCallBack	16	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:204:6:MTimer_Delay_us	16	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:218:6:MTimer_Delay_ms	24	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:227:6:MTimer_EnableInputCapture	16	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:357:5:MTimer_GetCCRValue	24	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:420:6:MTimer_SetInputCapturePolarity	16	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:502:6:MTimer_ClearCounter	16	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:527:6:TIM1_CC_IRQHandler	8	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:532:6:TIM2_IRQHandler	8	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:536:6:TIM3_IRQHandler	8	static
+../Src/01-MCAL/08-TIMER/TIMER_program.c:540:6:TIM4_IRQHandler	8	static

@@ -1,0 +1,8 @@
+Src/GPIO_program.o: ../Src/GPIO_program.c ../Inc/STD_TYPES.h \
+ ../Inc/BIT_Manipulation.h ../Inc/GPIO_private.h ../Inc/GPIO_config.h \
+ ../Inc/GPIO_interface.h
+../Inc/STD_TYPES.h:
+../Inc/BIT_Manipulation.h:
+../Inc/GPIO_private.h:
+../Inc/GPIO_config.h:
+../Inc/GPIO_interface.h:

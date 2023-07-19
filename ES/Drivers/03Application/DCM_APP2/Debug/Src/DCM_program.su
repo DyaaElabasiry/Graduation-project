@@ -1,0 +1,8 @@
+../Src/DCM_program.c:26:6:DCM_voidInit	24	static
+../Src/DCM_program.c:50:4:DCM_u8DetectDirection_ENCA	16	static
+../Src/DCM_program.c:72:6:DCM_voidENCAISR	8	static
+../Src/DCM_program.c:79:4:DCM_u8DetectDirection_ENCB	16	static
+../Src/DCM_program.c:100:6:DCM_voidENCBISR	8	static
+../Src/DCM_program.c:107:6:DCM_voidRotateCW	16	static
+../Src/DCM_program.c:118:6:DCM_voidRotateCCW	16	static
+../Src/DCM_program.c:129:6:DCM_voidSTOP	16	static

@@ -1,0 +1,4 @@
+../Src/02-HAL/00-ENCODER/ENCODER_program.c:33:6:Encoder_init	24	static
+../Src/02-HAL/00-ENCODER/ENCODER_program.c:64:6:Encoder_Forward	40	static
+../Src/02-HAL/00-ENCODER/ENCODER_program.c:81:6:Encoder_Backward	40	static
+../Src/02-HAL/00-ENCODER/ENCODER_program.c:97:6:RPM_Calculate	24	static

@@ -1,0 +1,3 @@
+../Src/ESP8266_program.c:28:16:ESP_ESP8266_RetrunInit	32	static,ignoring_inline_asm
+../Src/ESP8266_program.c:117:16:ESP8266_u8OkValidation	24	static
+../Src/ESP8266_program.c:152:16:ESP_ESP8266_RetrunConnectToWIFI	24	static

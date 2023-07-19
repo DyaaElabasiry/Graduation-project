@@ -1,0 +1,3 @@
+../Src/RCC_program.c:15:6:RCC_voidSysClkInit	4	static
+../Src/RCC_program.c:79:4:RCC_voidEnablePeripheralClk	24	static
+../Src/RCC_program.c:109:4:RCC_voidDisablePeripheralClk	24	static

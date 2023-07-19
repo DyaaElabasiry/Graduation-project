@@ -1,0 +1,3 @@
+../Src/USART_program.c:23:6:USART1_voidInit	4	static
+../Src/USART_program.c:49:6:USART1_voidSendData	16	static
+../Src/USART_program.c:55:6:USART1_voidSynchReceiveData	16	static
